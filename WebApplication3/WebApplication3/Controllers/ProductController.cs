@@ -5,7 +5,7 @@ namespace WebApplication3.Controllers
 {
     public class ProductController : Controller
     {
-        private static ProductsCatalog _catalog = new();
+        public static ProductsCatalog _catalog = new();
 
         [HttpGet]
         public IActionResult Products()
@@ -13,10 +13,11 @@ namespace WebApplication3.Controllers
             return View(_catalog);
         }
 
+
         [HttpPost]
-        public IActionResult Products([FromForm]ProductModel type)
+        public IActionResult Products([FromForm]ProductModel exemp)
         {
-            _catalog.GetProducts.Add(type);
+            _catalog.GetProducts.Add(exemp);
             return View(_catalog);
         }
     }

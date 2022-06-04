@@ -1,13 +1,9 @@
 ﻿@model ProductsCatalog 
 
 @{
-    ViewData["Title"] = "Список продуктров";
+    ViewData["Title"] = "Добавление продуктов";
 }
 
-@foreach (var type in Model.GetProducts)
-{
-    <div> @type.Id  @type.Name  @type.Description @type.Type  </div>
-}
 
 <form method="post">
     Id: <input type="text" name="id" required />

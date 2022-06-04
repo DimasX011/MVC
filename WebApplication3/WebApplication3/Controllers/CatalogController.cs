@@ -7,6 +7,7 @@ namespace WebApplication3.Controllers
     public class CatalogController  : Controller
     {
         private static Catalog _catalog = new();
+        private static ProductsCatalog __catalog = new();
 
 
         [HttpGet]
